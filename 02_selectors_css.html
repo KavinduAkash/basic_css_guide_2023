@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02 Selectors CSS</title>
+
+    <style>
+
+        /*-- Type Selector --*/
+        /*h1 {*/
+        /*    color: red;*/
+        /*}*/
+        /*p {*/
+        /*    color: green;*/
+        /*    font-weight: bold;*/
+        /*}*/
+
+        /*-----------------------------------------*/
+
+        /*-- Id Selector --*/
+        /*#firstH1 {*/
+        /*    color: purple;*/
+        /*}*/
+
+        /*-----------------------------------------*/
+
+        /*-- Class Selector --*/
+        /*.paragraph01 {*/
+        /*    color: orange;*/
+        /*}*/
+
+        /*-----------------------------------------*/
+
+        /*-- Universal Selector --*/
+        /** {*/
+        /*    color: hotpink;*/
+        /*}*/
+
+        /*-----------------------------------------*/
+
+        /*-- Attribute Selectors --*/
+        /*[class] {*/
+        /*    color: green;*/
+        /*}*/
+        /*[id] {*/
+        /*    color: blue;*/
+        /*}*/
+
+        /*[class = "paragraph01"] {*/
+        /*    color: green;*/
+        /*}*/
+
+        /*-- Attribute Selector with value --*/
+        /*[href = "https://yahoo.com"] {*/
+        /*    color: orange;*/
+        /*}*/
+
+        /*-- Attribute Selector with starting value --*/
+        /*[href ^= "https"] {*/
+        /*    color: red;*/
+        /*}*/
+        /*[href ^= "http"] {*/
+        /*    color: green;*/
+        /*}*/
+
+        /*-- Attribute Selector with ending value --*/
+        /*[href $= ".com"] {*/
+        /*    color: purple;*/
+        /*}*/
+
+        /*-- Attribute Selector with given value snippet --*/
+        /*[href *= "guide"] {*/
+        /*    color: aqua;*/
+        /*}*/
+
+        /*-- Attribute Selector with given word --*/
+        /*[href ~= "verify"] {*/
+        /*    color: darkgrey;*/
+        /*}*/
+
+        /*-- Attribute Selector with Type Selector --*/
+        /*h1[class="paragraph01"] {*/
+        /*    color: purple;*/
+        /*}*/
+
+        /*-- Attribute Selector with Class Selector --*/
+        /*.helloclass[href] {*/
+        /*    color: cornflowerblue;*/
+        /*}*/
+
+        /*-----------------------------------------*/
+        /*
+        Pseudo Selectors
+        1) Pseudo-Class Selectors (:) -> add style to state (status, location, etc) of an element
+        2) Pseudo-Element Selectors (::) -> add style to specific part of an element
+         */
+
+        /*1) ---------------------------------------*/
+
+        /*--> select specific status of an element*/
+
+        /*-- :hover --*/
+        /*h1:hover {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*-- :active - Apply style when click on the element --*/
+        /*h1:active {*/
+        /*    color: green;*/
+        /*}*/
+
+        /*-- :visited - apply styles to already visited links --*/
+        /*a:visited {*/
+        /*    color: orange;*/
+        /*}*/
+
+        /*-- :link - apply styles to non-visited links --*/
+        /*a:link {*/
+        /*    color: hotpink;*/
+        /*}*/
+
+        /*-- :focus - apply styles when focus to the element --*/
+        /*:focus {*/
+        /*    background-color: green;*/
+        /*}*/
+
+        /*input:focus {*/
+        /*    background-color: green;*/
+        /*}*/
+
+        /*--> select specific element according to the tree-structure (element location)*/
+
+        /*:first-child - Apply styles to first-child of parent*/
+        /*h1:first-child {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*h1:nth-child(2) {*/
+        /*    color: green;*/
+        /*}*/
+
+        /*h1:last-child {*/
+        /*    color: green;*/
+        /*}*/
+
+        /*!*-- :first-child - Select the first element --*!*/
+        /*li:first-child {*/
+        /*    color: hotpink;*/
+        /*}*/
+
+        /*!*-- :last-child - Select the last element --*!*/
+        /*li:last-child {*/
+        /*    color: orange;*/
+        /*}*/
+
+        /*!*-- :nth-child(2) - Select any element --*!*/
+        /*li:nth-child(3) {*/
+        /*    color: green;*/
+        /*}*/
+
+        /*!*-- :nth-last-child(4) - Select the element from bottom of the list --*!*/
+        /*li:nth-last-child(2) {*/
+        /*    color: purple;*/
+        /*}*/
+
+        /*-- :only-child - If list has only one child then select it --*/
+        /*li:only-child {*/
+        /*    color: cornflowerblue;*/
+        /*}*/
+
+        /*2) ---------------------------------------*/
+        /*!*-- ::before - add a content before the current content and style it --*!*/
+        /*h1::before {*/
+        /*    content: "🙂 ";*/
+        /*}*/
+
+        /*!*--::after - add a content after the current content and style it --*!*/
+        /*h1::after {*/
+        /*    content: " - Guide";*/
+        /*}*/
+
+        /*!*-- ::first-letter - add style to first letter --*!*/
+        /*p::first-letter {*/
+        /*    color: orange;*/
+        /*    font-size: 30px;*/
+        /*}*/
+
+        /*-- ::first-line - add style to first line --*/
+        /*p::first-line {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*::placeholder {*/
+        /*    color: blue;*/
+        /*    font-weight: bolder;*/
+        /*    font-size: 18px;*/
+        /*}*/
+
+        /*[name="username"]::placeholder {*/
+        /*    color: blue;*/
+        /*    font-weight: bolder;*/
+        /*    font-size: 18px;*/
+        /*}*/
+
+        /*-- ::file-selector-button - add style to file selector btn --*/
+        /*::file-selector-button {*/
+        /*    background-color: purple;*/
+        /*    cursor: pointer;*/
+        /*}*/
+
+        /*-- Pseudo-Element Selectors + Pseudo-Class Selectors --*/
+        /*::file-selector-button:hover {*/
+        /*    background-color: chocolate;*/
+        /*}*/
+
+        /*-- ::selection - style web content selection (highlight and select) --*/
+        /*::selection {*/
+        /*    background-color: hotpink;*/
+        /*    color: red;*/
+        /*}*/
+
+        /*-- ::marker - style markers in html lists (work with lists) --*/
+        /*::marker {*/
+        /*    content: "💡";*/
+        /*}*/
+        /*li:hover::marker {*/
+        /*    content: "💡";*/
+        /*}*/
+        /*li:first-child::marker {*/
+        /*    content: "💡";*/
+        /*}*/
+
+        /*----------------------------------------------------------*/
+
+        /*-- Group Selector --*/
+        /*h1, h2, h3, h4, .helloclass {*/
+        /*    color: red;*/
+        /*}*/
+
+        ol li:nth-child(-n + 2) {
+            color: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1 id="firstH1">Welcome to Module</h1>
+
+<h2>Hello</h2>
+<h3>Hi</h3>
+<h4>How are you?</h4>
+
+<p class="paragraph01">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error incidunt iure laborum provident quibusdam! Dolor
+    doloribus repudiandae tempore voluptate. Perferendis.
+</p>
+
+<a href="https://yahoo.com" class="helloclass">Go to Yahoo</a>
+<br><br>
+<a href="https://vimeo.com">Go to Vimeo</a>
+<br><br>
+<a href="http://talentlankatape.com">Go to Talent Lanka Tape</a>
+
+<ol>
+    <li>Java</li>
+    <li>Pyhton</li>
+    <li>C</li>
+    <li>C++</li>
+    <li>C#</li>
+</ol>
+
+<ol>
+    <li>CSS</li>
+</ol>
+
+<h1 class="paragraph01">Welcome to HTML</h1>
+
+<p class="paragraph02">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error incidunt iure laborum provident quibusdam! Dolor
+    doloribus repudiandae tempore voluptate. Perferendis.
+</p>
+
+<h1 class="helloclass">Welcome to CSS</h1>
+
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error incidunt iure laborum provident quibusdam! Dolor
+    doloribus repudiandae tempore voluptate. Perferendis.
+</p>
+
+<h1>Welcome to JS</h1>
+
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error incidunt iure laborum provident quibusdam! Dolor
+    doloribus repudiandae tempore voluptate. Perferendis.
+</p>
+
+<form>
+
+    <input type="text" name="username" id="username" placeholder="Enter Username">
+    <br><br>
+    <input type="password" name="password" id="password" placeholder="Enter Password">
+    <br><br>
+    <input type="file" name="file" id="file">
+    <br><br>
+    <input type="submit" name="submit" id="submit">
+</form>
+
+</body>
+</html>

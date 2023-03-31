@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05 Cascading CSS</title>
+
+    <style>
+
+        /*
+        Cascading
+        Process of combining different stylesheets and resolving conflicts
+        between different CSS rules and declarations, when more than one rule
+        applies to a certain element.
+
+
+        There are 3 steps to resolve the cascading:
+
+        Important -> Specificity -> source order
+
+        Specificity
+        1) Inline Selector = 1000
+        2) ID Selector = 100
+        3) Class or Pesudo Class or Attribute Selector = 10
+        4) Type or Pesudo Elements Selector = 1
+
+
+
+        */
+
+
+        h1 {
+            color: green;
+        }
+
+        #myH1 {
+            color: blue;
+        }
+
+
+
+        /*1 + 10 = 11*/
+        h1:first-child {
+            color: hotpink;
+        }
+
+        /*10*/
+        .myH1Class {
+            color: darkgrey;
+        }
+
+        /*10*/
+        [id] {
+            color: purple;
+        }
+
+
+
+
+
+
+
+        * {
+            color: orange;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1 class="myH1Class">Hello Cascading</h1>
+
+</body>
+</html>

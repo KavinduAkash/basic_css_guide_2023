@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03 Combinators CSS</title>
+
+    <style>
+
+        /*
+        Make relationships between the selectors
+
+        There are 4 types of Combinator
+        1) Child Combinator - check direct child ( > )
+        2) Decendent Combinator - select the child if exist anywhere inside the parent ( " " space )
+        3) Adjacent Combinator - select the element which is located first after given first element ( + )
+        4) General Siblings Combinator - select the element which is located after given first element ( ~ )
+         */
+
+        /*-- 1) Child Combinator - check direct child ( > ) --*/
+        /*main > section > p {*/
+        /*    color: green;*/
+        /*    font-weight: bolder;*/
+        /*}*/
+
+        /*-- 2) Decendent Combinator - select the child if exist anywhere inside the parent ( " " space ) --*/
+        /*main p {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*-- 3) Adjacent Combinator - select the element which is located first after given first element ( + ) --*/
+        /*h1 + ol {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*h1 + ol + li {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*li + h1 {*/
+        /*    color: orange;*/
+        /*}*/
+
+        /*-- 4) General Siblings Combinator - select the element which is located after given first element ( ~ ) --*/
+        /*li ~ h1 {*/
+        /*    color: red;*/
+        /*}*/
+
+        h1 + ol > li + h1 {
+            color: plum;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<main>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, numquam! - 01</p>
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, placeat. - 02</p>
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quod. - 03</p>
+            <ol>
+                <li>Jave</li>
+                <li>Python</li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, quasi.</p>
+                </li>
+                <li>Perl</li>
+            </ol>
+        </article>
+    </section>
+</main>
+
+<P>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, sequi.
+</P>
+
+<h1>Hello</h1>
+<ol id="sp">
+    <li>
+        <ul>
+            <li>Java Basics</li>
+            <li>Java EE</li>
+            <li>Spring Framework</li>
+            <li>Spring boot Framework</li>
+        </ul>
+    </li>
+
+    <h1>Java</h1>
+    <h1>Java2</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <h1>Java 3</h1>
+
+    <li>Python</li>
+    <li>GoLang</li>
+</ol>
+
+<h2>Hello2</h2>
+<ol>
+    <li>Java 02</li>
+    <li>Python 02</li>
+    <li>GoLang 02</li>
+</ol>
+
+<h1>Hello3</h1>
+<ol>
+    <li>Java 03</li>
+    <li>Python 03</li>
+    <li>GoLang 03</li>
+</ol>
+
+<h1>Hello 04</h1>
+    <ul>
+        <li>Java 03</li>
+        <li>Python 03</li>
+        <li>GoLang 03</li>
+    </ul>
+
+</body>
+</html>

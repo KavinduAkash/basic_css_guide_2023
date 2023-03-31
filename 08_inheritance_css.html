@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08 CSS Inheritance</title>
+
+    <style>
+
+        /*
+            CSS Properties
+            --------------
+
+            1. inherited properties
+            color
+            font-size
+
+            2. non-inherited properties
+            border
+            height
+
+            https://kavinduakash.medium.com/css-inherited-properties-and-non-inherited-properties-8ad8844c1b84
+14
+        */
+
+        main {
+            color: red;
+            font-size: 25px;
+            border: 5px solid mediumpurple;
+            height: 1000px;
+        }
+
+        section {
+            /*color: green;*/
+            border: 5px solid greenyellow;
+        }
+
+        div {
+            border: 5px solid orange;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<main>
+    <section>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, molestiae!
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, molestiae!
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
