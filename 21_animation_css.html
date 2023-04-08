@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>21 Animation CSS</title>
+
+    <style>
+
+        /*div {*/
+
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background-color: yellow;*/
+        /*    border: 2px solid darkred;*/
+
+        /*    animation-name: my-animation; !* name of the animation *!*/
+        /*    animation-duration: 3s; !* duration which is taken by a key frame to complete *!*/
+        /*    animation-play-state: running; !* running (default), paused *!*/
+        /*    !*animation-delay: 5s; !* animation will start after delay time (eg: animation wait 5s to start) *!*!*/
+        /*    animation-iteration-count: infinite; !* animation iteration count *!*/
+        /*    animation-direction: normal; !* normal(default), reverse, alternate, alternate-reverse *!*/
+        /*    !*animation-fill-mode: backwards; !* decide the which key frame need to apply after end of all keyframes | backwords - need to increase durtion to see the effect *!*!*/
+        /*    animation-timing-function: linear;*/
+
+        /*}*/
+
+        /*@keyframes my-animation {*/
+        /*    from {*/
+        /*        margin-left: 0;*/
+        /*        background-color: green;*/
+        /*    }*/
+        /*    to {*/
+        /*        margin-left: 500px;*/
+        /*        background-color: blue;*/
+        /*    }*/
+        /*}*/
+
+        /*div:hover {*/
+        /*    animation-play-state: paused; !* running (default), paused *!*/
+        /*}*/
+
+        /*---------------------------------------------------------------------*/
+
+        section {
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+        }
+
+        section>div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: my-animation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes my-animation {
+            0% {
+                margin-left: 0;
+                margin-top: 0;
+            }
+            25% {
+                margin-left: 400px;
+                margin-top: 0;
+            }
+            50% {
+                margin-left: 400px;
+                margin-top: 400px;
+            }
+            75% {
+                margin-left: 0;
+                margin-top: 400px;
+            }
+            100% {
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--<div></div>-->
+
+<section>
+    <div></div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        div {
+
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            border: 2px solid darkred;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+            animation-name: my-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+
+        @keyframes my-animation {
+            from {
+             background-color: pink;
+                transform: rotate(0deg);
+            }
+            to {
+                background-color: red;
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>
