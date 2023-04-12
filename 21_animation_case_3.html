@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Slider Animation</title>
+
+    <style>
+
+        main {
+            width: 400px;
+            height: 300px;
+            border: 1px solid red;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        main>section {
+            width: 1600px;
+            height: 300px;
+            border: 1px solid deepskyblue;
+            display: flex;
+
+            animation-name: silder-animation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        main>section>div {
+            width: 400px;
+            height: 300px;
+            border: 1px solid greenyellow;
+        }
+
+        main>section>div:nth-child(1) {
+            background-image: url("assets/images/slide/slide1.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        main>section>div:nth-child(2) {
+            background-image: url("assets/images/slide/slide2.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        main>section>div:nth-child(3) {
+            background-image: url("assets/images/slide/slide3.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        main>section>div:nth-child(4) {
+            background-image: url("assets/images/slide/slide4.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @keyframes silder-animation {
+            0%, 20% {
+                transform: translateX(-0%);
+            }
+            25%, 45% {
+                transform: translateX(-25%);
+            }
+            50%, 70% {
+                transform: translateX(-50%);
+            }
+            75%, 100% {
+                transform: translateX(-75%);
+            }
+            /*100% {*/
+            /*    transform: translateX(-100%);*/
+            /*}*/
+        }
+
+    </style>
+
+</head>
+<body>
+
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+
+</body>
+</html>

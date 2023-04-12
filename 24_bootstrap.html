@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>24 Bootstrap</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+    <style>
+
+        .custom-btn {
+            background-color: mediumpurple;
+        }
+
+        .custom-form {
+            width: 400px;
+            padding: 10px;
+            border: 1px solid #b6d4fe;
+            margin: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<header>
+
+    <nav class="navbar navbar-light bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="https://www.ijse.lk">
+                <img src="https://www.ijse.lk/images/logos/ijse.png" alt="" width="80" height="24">
+            </a>
+        </div>
+    </nav>
+
+</header>
+
+<h1 class="text-primary">
+    Hello Bootstrap
+</h1>
+
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab corporis cum ipsam maiores maxime molestiae non possimus quibusdam quisquam voluptatibus? Ab dignissimos impedit officiis rem tempora. Doloremque nesciunt quidem suscipit?
+</p>
+
+<button type="button" class="btn custom-btn">Click Me</button>
+<button type="button">Click me</button>
+
+
+<section class="container-fluid">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+        </tr>
+        </tbody>
+    </table>
+
+</section>
+
+
+
+<form class="custom-form">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+
+
+
+
+</body>
+</html>
